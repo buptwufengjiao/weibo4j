@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" " http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="weibo4j.Status" table="status">
+<id name="id" column="id"/>
+<property name="userId" column="userId"/>
+<property name="userName" column="userName"/>
+<property name="createdAt" column="createdAt"/>
+<property name="source" column="source"/>
+<property name="text" column="status_text"/>
+<property name="comments" column="commentsNum"/>
+<property name="rt" column="rtsNum"/>
+<property name="retweeted_status_id" column="retweeted_status_id"/>
+<property name="retweeted_status_text" column="retweeted_status_text"/>
+<property name="retweeted_status_userId" column="retweeted_status_userId"/>
+<property name="retweeted_status_useName" column="retweeeted_status_userName"/>
+</class>
+<class name="weibo4j.User" table="user">
+<id name="id" column="id"/>
+<property name="name" column="name"/>
+<property name="location" column="location"/>
+<property name="tags" column="tags"/>
+<property name="followersCount" column="followersCount"/>
+<property name="friendsCount" column="friendsCount"/>
+<property name="statusesCount" column="statusesCount"/>
+</class>
+<class name="weibo4j.Comment" table="comment">
+<id name="id" column="id"/>
+<property name="user1Id" column="user1Id"/>
+<property name="user1Name" column="user1Name"/>
+<property name="user2Id" column="user2Id"/>
+<property name="user2Name" column="user2Name"/>
+<property name="statusId" column="statusId"/>
+<property name="statusText" column="statusText"/>
+<property name="text" column="text"/>
+<property name="createdAt" column="createdAt"/>
+<property name="source" column="source"/>
+</class>
+<class name="weibo4j.Repost" table="repost">
+<id name="id">
+    <column name="id"/>
+    <generator class= "increment"/> 
+ </id>
+<property name="user1Id" column="user1Id"/>
+<property name="user1Name" column="user1Name"/>
+<property name="user2Id" column="user2Id"/>
+<property name="user2Name" column="user2Name"/>
+<property name="statusId" column="statusId"/>
+<property name="statusText" column="statusText"/>
+<property name="commentsText" column="commentsText"/>
+<property name="repost_time" column="repost_time"/>
+</class>
+<class name="weibo4j.Relation" table="relation">
+<composite-id>
+<key-property name="user1Id" column="user1Id"/>
+<key-property name="user2Id" column="user2Id"/>
+</composite-id>
+<property name="user1Name" column="user1Name"/>
+<property name="user2Name" column="user2Name"/>
+<property name="commentsNum" column="commentsNum"/>
+<property name="rtNum" column="rtNum"/>
+<property name="rtAndCommentNum" column="rtAndCommentNum"/>
+</class>
+<class name="weibo4j.Friend" table="friend">
+<composite-id>
+<key-property name="user1Id" column="user1Id"/>
+<key-property name="user2Id" column="user2Id"/>
+</composite-id>
+<property name="user1Name" column="user1Name"/>
+<property name="user2Name" column="user2Name"/>
+</class>
+<class name="weibo4j.Follower" table="follower">
+<composite-id>
+<key-property name="user1Id" column="user1Id"/>
+<key-property name="user2Id" column="user2Id"/>
+</composite-id>
+<property name="user1Name" column="user1Name"/>
+<property name="user2Name" column="user2Name"/>
+</class>
+</hibernate-mapping>
+
+

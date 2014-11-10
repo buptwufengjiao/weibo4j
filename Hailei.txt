@@ -1,0 +1,73 @@
+my.ini文件：sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+
+新浪微博：
+564084662@qq.com  19860621
+694515420@qq.com  fufengjiao
+
+刘海雷的：
+App Key:
+
+4222933292
+
+App Secret:
+
+04e5e9f9454d9c920101ef3ccbafe3cf
+
+
+Access token: c816b69ab5ec9d4c585bc3da58c81471
+Access token secret: d47dd92ea5277fbca8de13b558b95322
+
+我的token方式访问： c816b69ab5ec9d4c585bc3da58c81471 d47dd92ea5277fbca8de13b558b95322 1609740364
+
+吴凤娇的：
+App Key: 369062387
+App Secret:6a8cfc2730ef16184d66ecfb51feae49
+
+Access token: 13e48029d87a1d58a2197882748bf5dc
+Access token secret: 0671ca40d7ead357b2287d80d1551bde
+
+looksea幸福 2182933962
+
+姚晨的ID，1266321801
+ 
+清风之逸：1609740364
+
+娇娇_Candice 1257196584
+
+杨幂： 1195242865
+
+金莎： 1195366567
+
+李娜： 1746274673
+
+小s: 1704116960
+
+setinna   :  1270601043
+
+疼倩儿:  1299257252
+
+张晓仪： 1159999407
+
+xiaoxiao快乐： 1650477827
+
+ 结点大小，边的粗细可改变  显示
+多级显示结点 设定5级可扩展
+edu.uci.ics.jung.algorithms.cluster 中的EdgeBetweennessClusterer 
+实现社团划分算法  可从网上另外找  用不同的颜色区分不同的社团
+
+
+如何获取转发数量：
+暂时没好的办法，查看转发人的uid匹配下每个人转发了多少次，就会出现多少次他的uid。
+
+http://open.weibo.com/wiki/index.php/Statuses/repost_timeline
+ 
+返回的结果中有user字段，解析返回结果里面就有uid
+
+
+
+做报告先要先摘要
+
+摘要：
+
+
+
